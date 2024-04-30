@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/maurin/src/main/webapp/WEB-INF/pages/allusers.html" value="file://$PROJECT_DIR$/maurin/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/maurin/src/main/webapp/WEB-INF/pages/index.html" value="file://$PROJECT_DIR$/maurin/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/maurin/src/main/webapp/WEB-INF/pages/user.html" value="file://$PROJECT_DIR$/maurin/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/maurin/src/main/webapp/WEB-INF/pages/users/allusers.html" value="file://$PROJECT_DIR$/maurin/src/main/webapp/WEB-INF/pages/users" />
+      </map>
+    </option>
+  </component>
+</project>
