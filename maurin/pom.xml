@@ -13,6 +13,8 @@
     <spring.version>5.3.14</spring.version>
   </properties>
 
+
+
   <dependencies>
 
     <dependency>
@@ -22,12 +24,21 @@
     </dependency>
 
     <dependency>
+      <groupId>javax.persistence</groupId>
+      <artifactId>javax.persistence-api</artifactId>
+      <version>2.2</version>
+    </dependency>
+    <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>4.0.1</version>
       <scope>provided</scope>
     </dependency>
-
+    <dependency>
+      <groupId>javax.transaction</groupId>
+      <artifactId>javax.transaction-api</artifactId>
+      <version>1.2</version>
+    </dependency>
 
     <dependency>
       <groupId>org.thymeleaf</groupId>
@@ -44,7 +55,7 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>5.6.15.Final</version>
+      <version>5.6.3.Final</version>
     </dependency>
 
     <dependency>
@@ -82,7 +93,7 @@
         </configuration>
       </plugin>
     </plugins>
-    <finalName>Spring_MVC</finalName>
+    <finalName>SpringMVC_Hibernate</finalName>
   </build>
 
 </project>
