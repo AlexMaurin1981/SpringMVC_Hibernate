@@ -13,6 +13,8 @@
         <th>FIRSTNAME</th>
         <th>LASTNAME</th>
         <th>EMAIL</th>
+        <th>OPERATION </th>
+
     </tr>
 
     <tr th:each="users : ${allUsers}">
@@ -20,10 +22,14 @@
         <td th:text="${users.firstName}"/>
         <td th:text="${users.lastName}"/>
         <td th:text="${users.email}"/>
+<td>
+    <a th:href="@{'/users/deleteuser' + ${users.id}}">Delete</a>
+    <a th:href="@{'/users/updateuser' + ${users.id}}">Update</a>
+</td>
     </tr>
-
 </table>
 
+<a th:href="@{/users/adduser}">Add User</a>
 
 
 </body>

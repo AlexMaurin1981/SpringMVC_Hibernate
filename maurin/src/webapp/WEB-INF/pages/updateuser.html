@@ -2,12 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Add User</title>
+    <title>Update User</title>
 
 </head>
 <body>
 <h1>Add User</h1>
-<form th:action="@{/users/adduser}" th:object="${user}" method="post">
+<form th:action="@{/users/updateuser{id}(id=${user.id})}" th:object="${user}" method="post">
     <div>
         <label for="name">FirstName:</label>
         <input type="text" id="name" th:field="*{firstName}" required>
@@ -21,7 +21,7 @@
         <input type="email" id="email" th:field="*{email}" required>
     </div>
 
-    <button type="submit">Create</button>
+    <button type="submit">Update</button>
 </form>
 </body>
-</html>
+</html>>

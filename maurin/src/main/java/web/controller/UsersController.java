@@ -17,10 +17,10 @@ public class UsersController {
         this.userService = userService;
     }
 
-    @GetMapping("/allusers")
+    @GetMapping
     public String getAllUsers ( Model model){
         model.addAttribute("allUsers", userService.getAllUsers());
-        return "allusers";
+        return "users";
     }
 
 
@@ -30,16 +30,29 @@ public class UsersController {
         return"adduser";
     }
 
-    @PostMapping
+    @PostMapping("/adduser")
     public  String createUser (@ModelAttribute("user") User user){
     userService.saveUser(user);
-    return "redirect:users/allusers";
+    return "redirect:/users";
     }
 
-    @GetMapping("/deleteUser")
-    public  String deleteUser (@RequestParam ("id") long id){
+    @GetMapping("/deleteuser{id}")
+    public  String deleteUser (@PathVariable ("id") long id){
+
         userService.deleteUser(id);
-        return "deletUser";
+        return "redirect:/users";
     }
 
+    @GetMapping("/updateuser{id}")
+    public  String updateUser (@PathVariable("id") Long id, Model model){
+        model.addAttribute("user",userService.getUser(id));
+
+        return "updateuser";
+    }
+    @PostMapping("/updateuser{id}")
+    public  String saveUpdateUser (@PathVariable("id") long id, @ModelAttribute ("user") User user){
+user.setId(id);
+userService.updateUser(user);
+        return "redirect:/users";
+    }
 }
