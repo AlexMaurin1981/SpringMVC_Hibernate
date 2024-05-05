@@ -40,4 +40,5 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
         aServletContext.addFilter("hiddenHttpMethodFilter", new HiddenHttpMethodFilter())
                 .addMappingForUrlPatterns(null, true, "/*");
     }
+
 }

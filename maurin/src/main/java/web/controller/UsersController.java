@@ -44,7 +44,7 @@ public class UsersController {
     }
 
     @GetMapping("/updateuser{id}")
-    public  String updateUser (@PathVariable("id") Long id, Model model){
+    public  String updateUser (@PathVariable ("id") Long id, Model model){
         model.addAttribute("user",userService.getUser(id));
 
         return "updateuser";

@@ -8,7 +8,11 @@
 <body>
 <h1>Add User</h1>
 <form th:action="@{/users/updateuser{id}(id=${user.id})}" th:object="${user}" method="post">
+
+    <input type="hidden" th:value="${user.id}" name="id"/>
+
     <div>
+
         <label for="name">FirstName:</label>
         <input type="text" id="name" th:field="*{firstName}" required>
     </div>
