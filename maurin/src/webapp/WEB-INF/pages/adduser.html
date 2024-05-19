@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Add User</h1>
-<form th:action="@{/users/adduser}" th:object="${user}" method="post">
+<form th:action="@{/users/saveUser}" th:object="${user}" th:method="post">
     <div>
         <label for="name">FirstName:</label>
         <input type="text" id="name" th:field="*{firstName}" required>

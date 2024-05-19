@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringMVC_Hibernate.iml" filepath="$PROJECT_DIR$/.idea/SpringMVC_Hibernate.iml" />
-      <module fileurl="file://$PROJECT_DIR$/maurin.iml" filepath="$PROJECT_DIR$/maurin.iml" />
     </modules>
   </component>
 </project>

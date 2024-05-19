@@ -18,41 +18,38 @@ public class UsersController {
     }
 
     @GetMapping
-    public String getAllUsers ( Model model){
-        model.addAttribute("allUsers", userService.getAllUsers());
+    public String showAllUsers(Model model) {
+       model.addAttribute("allUsers", userService.getAllUsers()) ;
         return "users";
     }
 
 
-    @GetMapping ("/adduser")
-    public  String adduser (Model model){
-        model.addAttribute("user", new User());
-        return"adduser";
+    @GetMapping("/addNewUser")
+    public String addNewUser(Model model) {
+    User user = new User();
+    model.addAttribute("user", user );
+    return "adduser";
+    }
+@PostMapping("/saveUser")
+    public String saveUser (@ModelAttribute ("user") User user){
+        userService.saveUser(user);
+        return  "redirect:/users";
     }
 
-    @PostMapping("/adduser")
-    public  String createUser (@ModelAttribute("user") User user){
-    userService.saveUser(user);
-    return "redirect:/users";
-    }
-
-    @GetMapping("/deleteuser{id}")
-    public  String deleteUser (@PathVariable ("id") long id){
-
+    @PostMapping("/deleteUser")
+    public String deleteUser (@RequestParam ("id") int id){
         userService.deleteUser(id);
         return "redirect:/users";
     }
-
-    @GetMapping("/updateuser{id}")
-    public  String updateUser (@PathVariable ("id") Long id, Model model){
-        model.addAttribute("user",userService.getUser(id));
-
+    @GetMapping ("/updateUser")
+    public String  update(@RequestParam ("id") int id,Model model) {
+        model.addAttribute("user", userService.getUser(id));
         return "updateuser";
     }
-    @PostMapping("/updateuser{id}")
-    public  String saveUpdateUser (@PathVariable("id") long id, @ModelAttribute ("user") User user){
-user.setId(id);
-userService.updateUser(user);
+    @PostMapping("/user")
+    public String save (@RequestParam ("id") int id, @ModelAttribute("user") User user) {
+        user.setId(id);
+        userService.updateUser(user);
         return "redirect:/users";
     }
 }

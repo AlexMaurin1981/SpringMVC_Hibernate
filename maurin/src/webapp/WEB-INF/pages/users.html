@@ -23,13 +23,21 @@
         <td th:text="${users.lastName}"/>
         <td th:text="${users.email}"/>
 <td>
-    <a th:href="@{'/users/deleteuser' + ${users.id}}">Delete</a>
-    <a th:href="@{'/users/updateuser' + ${users.id}}">Update</a>
+    <form th:method="GET" th:action="@{/users/updateUser(id=${users.getId()})}">
+        <input type="submit" value="Update"/>
+
+    </form>
+
+</td>
+        <td>
+    <form th:method="POST" th:action="@{/users/deleteUser(id=${users.getId()})}">
+        <input type="submit" value="Delete"/>
+        </form>
 </td>
     </tr>
 </table>
 
-<a th:href="@{/users/adduser}">Add User</a>
+<a th:href="@{/users/addNewUser}">Add User</a>
 
 
 </body>

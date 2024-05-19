@@ -1,22 +1,26 @@
 package web.dao;
 
-import web.model.User;
 import org.springframework.stereotype.Repository;
+
+
+import web.model.User;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
+
 
 @Repository
 public class UserDaoImp implements UserDao {
 
 @PersistenceContext
-   EntityManager entityManager;
+EntityManager entityManager;
 
 
    @Override
    public List<User> getAllUsers() {
-     List <User> userList =  entityManager.createQuery("from User", User.class).getResultList();
-      return userList;
+       return  entityManager.createQuery("from User", User.class).getResultList();
+
    }
 
    @Override
@@ -25,7 +29,7 @@ public class UserDaoImp implements UserDao {
    }
 
    @Override
-   public User getUser(Long id) {
+   public User getUser(int id) {
        return entityManager.find(User.class,id);
 
    }
@@ -36,7 +40,7 @@ public class UserDaoImp implements UserDao {
    }
 
    @Override
-   public void deleteUser(Long id) {
+   public void deleteUser(int id) {
      User user = entityManager.find(User.class,id);
      if (user!=null){
         entityManager.remove(user);

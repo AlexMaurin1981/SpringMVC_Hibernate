@@ -8,7 +8,9 @@
         <entry key="file://$PROJECT_DIR$/maurin/src/main/webapp/WEB-INF/pages/user.html" value="file://$PROJECT_DIR$/maurin/src/main/webapp/WEB-INF/pages" />
         <entry key="file://$PROJECT_DIR$/maurin/src/main/webapp/WEB-INF/pages/users/allusers.html" value="file://$PROJECT_DIR$/maurin/src/main/webapp/WEB-INF/pages/users" />
         <entry key="file://$PROJECT_DIR$/maurin/src/webapp/WEB-INF/pages/allusers.html" value="file://$PROJECT_DIR$/maurin/src/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/maurin/src/webapp/WEB-INF/pages/delete.html" value="file://$PROJECT_DIR$/maurin/src/webapp/WEB-INF/pages" />
         <entry key="file://$PROJECT_DIR$/maurin/src/webapp/WEB-INF/pages/index.html" value="file://$PROJECT_DIR$/maurin/src/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/maurin/src/webapp/WEB-INF/pages/users.html" value="file://$PROJECT_DIR$/maurin/src/webapp/WEB-INF/pages" />
       </map>
     </option>
   </component>
