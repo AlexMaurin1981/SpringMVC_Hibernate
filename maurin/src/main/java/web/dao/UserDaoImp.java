@@ -36,7 +36,7 @@ EntityManager entityManager;
 
    @Override
    public void updateUser(User user) {
-        entityManager.merge(User.class);
+        entityManager.merge(user);
    }
 
    @Override

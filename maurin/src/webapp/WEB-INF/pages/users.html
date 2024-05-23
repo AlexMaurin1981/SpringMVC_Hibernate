@@ -23,10 +23,7 @@
         <td th:text="${users.lastName}"/>
         <td th:text="${users.email}"/>
 <td>
-    <form th:method="GET" th:action="@{/users/updateUser(id=${users.getId()})}">
-        <input type="submit" value="Update"/>
-
-    </form>
+    <a th:href="@{/users/updateUser(id=${users.getId()})}">Update</a>
 
 </td>
         <td>
